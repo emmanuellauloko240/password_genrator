@@ -6,14 +6,14 @@ all_characters = string.ascii_lowercase + string.ascii_uppercase + string.digits
 def get_password_length():
     while True:
         try:
-            password_length = int(input("How long do you want your password length: "))
-            return password_length
+            password_character_length = int(input("How long do you want your password length: "))
+            return password_character_length
         except ValueError:
             print("That's not a valid number! Try again.")
-password_length = get_password_length()
+password_character_length = get_password_length()
 password_characters = []
 
-for i in range(password_length):
+for i in range(password_character_length):
     password_characters.append(random.choice(all_characters))
 password = "".join(password_characters)
 print(password)
